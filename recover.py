@@ -195,9 +195,9 @@ def linkTimeCheck(link):
 
         content = meta_element.get("content")
         first_time = content.split(" - ")[0].split("on ")[1]
-        print(f'timestamp', timestamp)
+        
         timestamp = first_time.replace(" ", "-").replace(":", "-")
-
+        print(f'timestamp', timestamp)
         return timestamp
 
     elif linkChecker(link) == 0:
