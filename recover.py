@@ -74,6 +74,8 @@ def linkTimeCheck(link):
     # global timestamp
     if linkChecker(link) == 2 or linkChecker(link) == 4:  # sadece 2 ve 4 dönerse girsin
         print('Date and Time are checking..')
+        encoded_link = urllib.parse.quote(link, safe='')
+        link = f"https://api.scrapingant.com/v2/general?url={encoded_link}&x-api-key={api_key}"
         r = requests.get(link)
 
         soup = BeautifulSoup(r.content, 'html.parser')
