@@ -82,10 +82,7 @@ def linkTimeCheck(link):
         try:
             time = gelenveri[0].text
         except:
-            print('You probably got into cloudflare for bots.(could not find time data) There is nothing I can do for this error for now. \n'
-                  'Please fork if you can bypass this cloudflare. \n'
-                  'You will not get an error when you try again after a while. \n'
-                  'So try again after a while. ')
+            print('It seems you even copy and paste your api key, please paste it and try again. ')
             return
 
         if '\n' in time:
@@ -190,8 +187,11 @@ def linkTimeCheck(link):
 
         soup = BeautifulSoup(r.content, 'html.parser')
 
-        meta_element = soup.find("meta", attrs={"name": "description"})
-
+        try:
+            meta_element = soup.find("meta", attrs={"name": "description"})
+            content = meta_element.get("content")
+        except AttributeError:
+            print("It seems you even copy and paste your api key, please paste it and try again.")
         content = meta_element.get("content")
         first_time = content.split(" - ")[0].split("on ")[1]
         
