@@ -5,11 +5,8 @@ import urllib.request
 from threading import Thread
 from bs4 import BeautifulSoup
 import requests
-import webbrowser
-import cfscrape
-import cloudscraper
 
-api_key = "YOUR_SCRAPINGANT_API_KEY"
+api_key = "YOUR_API_KEY"
 
 domains = [
     "https://vod-secure.twitch.tv",
