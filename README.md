@@ -21,7 +21,8 @@ Usage:
 
 4. Sign up at https://scrapingant.com/ and go to https://app.scrapingant.com/dashboard to copy your API key.
 
-5. In the code editor, locate the variable api_key and replace the value with your API key (e.g., api_key = "YOUR_API_KEY"), then save the file.
+5. In the code editor, locate the variable api_key and replace the value with your API key 
+   (e.g., api_key = "YOUR_API_KEY"), then save the file.
 
 
 ## How do I use this link
